@@ -7,6 +7,12 @@ angular.module('starter.controllers', [])
     console.error('ERR',err);
   })
 
+
+.controller('HomePageCtrl', function($scope){
+  $scope.message = "Test CODE!!";
+  console.log("Testing 1,2")
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -31,4 +37,8 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 });
+
+.controller('MainCtrl', function($scope)){
+  $scope.counter = 
+}
 

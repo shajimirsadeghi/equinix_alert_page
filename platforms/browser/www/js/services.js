@@ -1,5 +1,9 @@
 angular.module('starter.services', [])
 
+//var alertCount = require(./backend/servr/data_retriever_server/Home_Page_Data.js);
+//var companyInfo = require(./backend/servr/data_retriever_server/Company_Page.js);
+
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 

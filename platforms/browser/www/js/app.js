@@ -9,18 +9,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 var app = angular.module("App", ["ionic"]);
 
-app.service("alertCounter",["$http","$log",alertCounter]);
-
-var company;
-
-function alertCounter($http, $log){
-  this.getAlert = function(){
-    $http.json("localhost:5000/" + company).sucess(function(result){
-      $log.info(JSON.stringify(result.posts));
-    });
-  };
-}
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -41,7 +29,9 @@ function alertCounter($http, $log){
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
+
+  $stateProvider //$stateProvider.state('name', {template: , ..}) 
+  // shows where to look for what and all it's dependencies
 
   // setup an abstract state for the tabs directive
     .state('tab', {
@@ -63,7 +53,7 @@ function alertCounter($http, $log){
   })
 
   .state('tab.chats', {
-      url: '/chats',
+      url: 'localhost:8000/chats',
       views: {
         'tab-chats': {
           templateUrl: 'templates/tab-chats.html',
